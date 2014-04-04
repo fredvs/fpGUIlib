@@ -1,11 +1,13 @@
 fpc compiler must be installed.
 
-Go to https://github.com/graemeg/fpGUI/develop and click on "Download ZIP".
+Then go to:
+=> https://github.com/graemeg/fpGUI/tree/develop
+and click on "Download ZIP".
 
 Unzip the folder.
 
-Add all the Fu and Fi needed by fpGUI in fpc.cfg or use fpc-fpGUI patch in /patch (read readme.txt before apply patch please)
+Add all the Fu and Fi needed by fpGUI in fpc.cfg or use fpc patch in /patch (read readme.txt before apply patch please)
 
-Then compile fpGUI.pas from /src.
+Then compile fpGUI.pas from /src
 
 Fred van Stappen.
