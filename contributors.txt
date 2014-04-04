@@ -1,0 +1,5 @@
+Here are the great contributors of fpGUIlib :
+
+x2nie => Python module => https://github.com/x2nie.
+
+Fred van Stappen : fiens@hotmail.com 
