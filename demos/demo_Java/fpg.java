@@ -159,22 +159,22 @@ public class fpg {
 		if( os.indexOf( "win" ) >= 0 )
 		{
 	  enableassistivecust(pa + "",
-	                      pa + "/lib/sakit/libwin32/espeak.exe",
-                          pa + "/lib/sakit") ;
+	                      pa + "/sakit/libwin32/espeak.exe",
+                          pa + "/sakit") ;
 			}
 		else
 	 {
 			if( System.getProperty( "os.arch" ).contains( "64" ) )
 			{
-	  enableassistivecust(pa + "/lib/sakit/liblinux64/libportaudio_x64.so",
-	                      pa + "/lib/sakit/liblinux64/speak_x64",
-                          pa + "/lib/sakit") ;
+	  enableassistivecust(pa + "/sakit/liblinux64/libportaudio_x64.so",
+	                      pa + "/sakit/liblinux64/speak_x64",
+                          pa + "/sakit") ;
 			}
 			else
 			{
-	  enableassistivecust(pa + "/lib/sakit/liblinux32/libportaudio_x86.so",
-	                      pa + "/lib/sakit/liblinux32/speak_x86",
-                          pa + "/lib/sakit") ;
+	  enableassistivecust(pa + "/sakit/liblinux32/libportaudio_x86.so",
+	                      pa + "/sakit/liblinux32/speak_x86",
+                          pa + "/sakit") ;
 			}
 		}		
 	

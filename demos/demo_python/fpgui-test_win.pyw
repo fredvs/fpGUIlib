@@ -1,12 +1,11 @@
-#file fpgui-at-test_lin.py
+#file fpgui-at-test_win.py
 import string 
 import os,sys
-di = sys.path[0] + '/lib/'
 dia = sys.path[0]
 from ctypes import*
 
 def theproc(frmindx,typobj,objindx):
-    fpgui.fpgformwindowtitle(0, 'form was clicked...')
+    fpgui.fpgformwindowtitle(0, 'Main Form was clicked...')
     return 0 
 
 def theprocbut0(frmindx,typobj,objindx):
@@ -32,7 +31,7 @@ def theprocbut3(frmindx,typobj,objindx):
 def theprocbut4(frmindx,typobj,objindx):
     fpgui.fpgformcreate(1, -1)
     fpgui.fpgformsetposition(1, 300,100,270,100)
-    fpgui.fpgformwindowtitle(1, 'hello Galaxy!')
+    fpgui.fpgformwindowtitle(1, 'Hello Galaxy!')
     fpgui.fpgformscreenposition(1,2)
     fpgui.fpgformbackgroundcolor(1,2563456)
     fpgui.fpgbuttoncreate(1,0,-1) ;
@@ -45,7 +44,7 @@ def theprocbut4(frmindx,typobj,objindx):
 def theprocbut5(frmindx,typobj,objindx):
     fpgui.fpgformcreate(2, -1)
     fpgui.fpgformsetposition(2, 300,100,300,200)
-    fpgui.fpgformwindowtitle(2, 'hello universe! i am a modal form...')
+    fpgui.fpgformwindowtitle(2, 'Hello universe! i am a modal form...')
     fpgui.fpgformscreenposition(2,2)
     fpgui.fpgformbackgroundcolor(2,63456)
     fpgui.fpgbuttoncreate(2,0,-1) ;
@@ -90,7 +89,7 @@ def theprocbut11(frmindx,typobj,objindx):
 def theprocbut12(frmindx,typobj,objindx):
     fpgui.fpgbuttonsetenabled(0,11,1)
     fpgui.fpgbuttonsetenabled(0,10,0)
-    fpgui.fpgenableassistivecust(dia + '/lib/sakit/liblinux64/libportaudio_x64.so',dia + '/lib/sakit/liblinux64/speak_x64',dia + '/lib/sakit')   
+    fpgui.fpgenableassistivecust( '',dia + '/sakit/libwin32/espeak.exe',dia + '/sakit')   
     return 0 
     
 def theprocbut13(frmindx,typobj,objindx):
@@ -102,6 +101,7 @@ def theprocbut13(frmindx,typobj,objindx):
 def theprocbut14(frmindx,typobj,objindx):
     fpgui.fpgformcreate(3, -1)
     fpgui.fpgformtype(3,3)
+    fpgui.fpgformwindowtitle(2, 'Hello universe! I am a splash form...')
     fpgui.fpgformsetposition(3, 300,100,270,100)
     fpgui.fpgformscreenposition(3,2)
     fpgui.fpgformbackgroundcolor(3,6345612)
@@ -156,8 +156,7 @@ theprocb15 = CMPFUNC(theprocbut15)
 theprocb16 = CMPFUNC(theprocbut16)
 theprocb17 = CMPFUNC(theprocbut17)
 
-
-fpgui = cdll.LoadLibrary(di + "libfpgui-64.so")
+fpgui = cdll.LoadLibrary(di + "fpgui.dll")
 
 fpgui.fpginitialize()
 fpgui.fpgsetstyle('Demo style')

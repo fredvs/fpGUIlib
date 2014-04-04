@@ -15,8 +15,6 @@ begin
 if odd(x) then fpgFormBackgroundColor(0,$fff0fff0) else
  fpgFormBackgroundColor(0,$ff9400d3)  ;
 inc(x);
-// fpgSetStyle('Demo Style') ;
-
 end;
 
 procedure ButtonClick00(formindex, typeobj, objindex : integer);
@@ -48,7 +46,6 @@ begin
  if odd(x) then fpgFormBackgroundColor(1,$ff00ffff) else
   fpgFormBackgroundColor(1,$fff5f5dc)  ;
  inc(x);
-//fpgSetStyle('Carbon') ;
  end;
 
 procedure ButtonClick10(formSender, typeSender, indexSender : integer);
@@ -138,20 +135,12 @@ ordir, title : string;
 begin
     ordir := IncludeTrailingBackslash(ExtractFilePath(ParamStr(0)));
     {$IFDEF Windows}
-     {$if defined(cpu64)}
-    ordir := ordir + 'lib\fpgui-64.dll';
-   {$else}
-    ordir := ordir + 'lib\fpgui-32.dll';
-     {$endif}
- {$ENDIF}
+      ordir := ordir + 'fpgui.dll';
+    {$ENDIF}
 
    {$IFDEF linux}
-     {$if defined(cpu64)}
-    ordir := ordir + 'lib/libfpgui-64.so';
-   {$else}
-    ordir := ordir + 'lib/libfpgui-32.so';
-     {$endif}
- {$ENDIF}
+        ordir := ordir + 'libfpgui.so';
+    {$ENDIF}
 
  if fpg_loadlib(pchar(ordir)) then
   try

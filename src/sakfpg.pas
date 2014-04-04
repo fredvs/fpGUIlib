@@ -186,6 +186,7 @@ function WhatName(Sender: TObject): string;
 var
   old8087cw: word;
   InitSpeech: TSAK_Init;
+  isloadedroot : boolean = false ;
   mouseclicked:  boolean =  false;
     AProcess: TProcess;
    {$IFDEF Windows}
@@ -637,8 +638,11 @@ end;
 function SAKLoadLibCust(PortaudioLib: pchar; eSpeakLib: pchar;
   eSpeakDataDir: pchar): integer;
 begin
-  Result := -1;
+ 
+ if assigned(InitSpeech) then 
+ if initspeech.isworking = True then exit;
 
+ Result := -1;
   if assigned(InitSpeech) then
   begin
      initspeech.voice_language:= '';
@@ -647,6 +651,7 @@ begin
   end
   else
   begin
+  if assigned(InitSpeech) then InitSpeech.free;
     InitSpeech := TSAK_Init.Create;
      initspeech.voice_language:= '';
      initspeech.voice_gender:= '' ;
@@ -663,7 +668,7 @@ begin
     begin
       Result := 0;
       initspeech.PA_FileName := PortaudioLib;
-    end;
+    end else Result := -2;
         {$endif}
 
     if (Result = 0) and (fileexists(eSpeakLib)) then
@@ -674,14 +679,19 @@ begin
          fpchmod(eSpeakLib,S_IRWXU) ;
         {$endif}
       initspeech.ES_FileName := eSpeakLib;
-    end;
+    end else Result := -3;
   end;
 
   if (Result = 0) or (initspeech.isloaded = True) then
   begin
     Result := InitSpeech.loadlib;
-    initspeech.isWorking := True;
+      if Result > -1 then 
+   begin
+   initspeech.isWorking := True;
+   isloadedroot := True;
   end;
+  end;
+  if (result < 0 ) and (assigned(InitSpeech)) then InitSpeech.free;
 end;
 
 function SAKLoadLib: integer;
@@ -819,7 +829,7 @@ begin
     end;
 
                 {$endif}
-
+     if (result < 0 ) and (assigned(InitSpeech)) then InitSpeech.free;
 
   end;
 
@@ -827,6 +837,7 @@ begin
   begin
       Result := InitSpeech.loadlib;
         initspeech.isworking := True;
+         isloadedroot := True;
   end  ;
 
 end;
@@ -1209,15 +1220,19 @@ begin
     Pa_Handle:=DynLibs.NilHandle;
         {$endif}
     Set8087CW(old8087cw);
+     isloadedroot := false;
 end;
  end;
 
 function SAKUnLoadLib: integer;
 begin
- if assigned(InitSpeech) then
+if  (isloadedroot = True) then
+begin
+ if (assigned(InitSpeech)) then
   begin
   InitSpeech.isWorking := False;
   InitSpeech.UnLoadLib;
+  end;
   end;
 end;
 
