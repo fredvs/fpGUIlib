@@ -156,7 +156,7 @@ theprocb15 = CMPFUNC(theprocbut15)
 theprocb16 = CMPFUNC(theprocbut16)
 theprocb17 = CMPFUNC(theprocbut17)
 
-fpgui = cdll.LoadLibrary(di + "fpgui.dll")
+fpgui = cdll.LoadLibrary(dia + "fpgui.dll")
 
 fpgui.fpginitialize()
 fpgui.fpgsetstyle('Demo style')
