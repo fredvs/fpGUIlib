@@ -45,7 +45,7 @@ public class fpg {
  
  /////////////// The callback methods used by fpGUI library ////////// 
  public static void formclick0()
- { formwindowtitle(0, "Main form was clicked");}
+ { formwindowtitle(0, "Main form was boum");}
    
    public static void formclose0()
     {freeassistive();}

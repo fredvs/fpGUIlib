@@ -57,7 +57,7 @@ result := sakfpg.saKLoadLibcust((PEnv^^).GetStringUTFChars(PEnv, portaudioLib, n
       (PEnv^^).ReleaseStringUTFChars(PEnv, espeakDataDir, nil);
 if result <> -1 then Isassistive := true else Isassistive := false;
  end;
-{$else})
+{$else}
 function fpgenableassistivecust(portaudioLib: pchar; espeakLib: pchar;
   espeakDataDir: pchar) : cint32 ; cdecl;
  begin
@@ -691,4 +691,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.

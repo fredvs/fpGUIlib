@@ -638,7 +638,20 @@ end;
 function SAKLoadLibCust(PortaudioLib: pchar; eSpeakLib: pchar;
   eSpeakDataDir: pchar): integer;
 begin
- 
+ result := -1;
+  {$ifdef windows}
+  if (fileexists(eSpeakLib)) then result := 0;
+
+        {$else}
+if (fileexists(PortaudioLib)) then result := 0;
+if result = 0 then if not (fileexists(eSpeakLib)) then result := -2 ;
+          {$endif}
+
+if result = 0 then if not directoryexists(eSpeakDataDir) then  result := -3;
+
+if result = 0 then
+begin
+
  if assigned(InitSpeech) then 
  if initspeech.isworking = True then exit;
 
@@ -651,35 +664,18 @@ begin
   end
   else
   begin
-  if assigned(InitSpeech) then InitSpeech.free;
-    InitSpeech := TSAK_Init.Create;
+     InitSpeech := TSAK_Init.Create;
      initspeech.voice_language:= '';
      initspeech.voice_gender:= '' ;
      initspeech.isloaded := False;
-    if directoryexists(eSpeakDataDir) then
-    begin
-      Result := 0;
-      initspeech.ES_DataDirectory := eSpeakDataDir;
-    end;
-
-      {$ifdef windows}
+     initspeech.ES_DataDirectory := eSpeakDataDir;
+       {$ifdef windows}
        {$else}
-        if (Result = 0) and (fileexists(PortaudioLib)) then
-    begin
-      Result := 0;
-      initspeech.PA_FileName := PortaudioLib;
-    end else Result := -2;
-        {$endif}
-
-    if (Result = 0) and (fileexists(eSpeakLib)) then
-    begin
-      Result := 0;
-        {$ifdef windows}
-       {$else}
+         initspeech.PA_FileName := PortaudioLib;
          fpchmod(eSpeakLib,S_IRWXU) ;
         {$endif}
       initspeech.ES_FileName := eSpeakLib;
-    end else Result := -3;
+       Result := 0;
   end;
 
   if (Result = 0) or (initspeech.isloaded = True) then
@@ -692,6 +688,7 @@ begin
   end;
   end;
   if (result < 0 ) and (assigned(InitSpeech)) then InitSpeech.free;
+end;
 end;
 
 function SAKLoadLib: integer;

@@ -1,11 +1,11 @@
 #file fpgui-at-test_lin.py
 import string 
-import os,sys
+import os,sys,platform
 dia = sys.path[0]
 from ctypes import*
 
 def theproc(frmindx,typobj,objindx):
-    fpgui.fpgformwindowtitle(0, 'form was clicked...')
+    fpgui.fpgformwindowtitle(0, 'Main Form was clicked...')
     return 0 
 
 def theprocbut0(frmindx,typobj,objindx):
@@ -89,7 +89,11 @@ def theprocbut11(frmindx,typobj,objindx):
 def theprocbut12(frmindx,typobj,objindx):
     fpgui.fpgbuttonsetenabled(0,11,1)
     fpgui.fpgbuttonsetenabled(0,10,0)
-    fpgui.fpgenableassistivecust(dia + '/sakit/liblinux64/libportaudio_x64.so',dia + '/sakit/liblinux64/speak_x64',dia + '/sakit')   
+    if sys.platform == "win32":
+        fpgui.fpgenableassistivecust( '',dia + '/sakit/libwin32/espeak.exe',dia + '/sakit') 
+    elif sys.platform.startswith('linux'):
+        fpgui.fpgenableassistivecust(dia + '/sakit/liblinux64/libportaudio_x64.so',dia + '/sakit/liblinux64/speak_x64',dia + '/sakit')   
+    
     return 0 
     
 def theprocbut13(frmindx,typobj,objindx):
@@ -132,6 +136,10 @@ def theprocbut16(frmindx,typobj,objindx):
 def theprocbut17(frmindx,typobj,objindx):
     fpgui.fpgformclose(4) 
     return 0  
+    
+def theprocbut18(frmindx,typobj,objindx):
+    fpgui.fpgfreeassistive() 
+    return 0  
      
 CMPFUNC = CFUNCTYPE(c_int,c_int,c_int,c_int)
 
@@ -154,9 +162,18 @@ theprocb14 = CMPFUNC(theprocbut14)
 theprocb15 = CMPFUNC(theprocbut15)
 theprocb16 = CMPFUNC(theprocbut16)
 theprocb17 = CMPFUNC(theprocbut17)
+theprocb18 = CMPFUNC(theprocbut18)
 
+if sys.platform == "win32":
+	fpgui_lib = "fpgui.dll"
+elif sys.platform.startswith('linux'):
+	fpgui_lib = "libfpgui.so"
+else:
+	raise "Sorry, currently your OS is not yet supported"
+fpguidll = os.path.join( dia , fpgui_lib)
+#print fpguidll
 
-fpgui = cdll.LoadLibrary(dia + "/libfpgui.so")
+fpgui = cdll.LoadLibrary(fpguidll)
 
 fpgui.fpginitialize()
 fpgui.fpgsetstyle('Demo style')
@@ -165,6 +182,7 @@ fpgui.fpgformsetposition(0, 300,100,370,435)
 fpgui.fpgformwindowtitle(0, 'hello world! i am a fpGui form...')
 
 fpgui.fpgformonclick(0,theprocf) 
+fpgui.fpgformonclose(0,theprocb18);
 
 fpgui.fpgbuttoncreate(0,0,-1,-1) ;
 fpgui.fpgbuttonsetposition(0,0, 15, 10 , 150 , 40)

@@ -48,62 +48,62 @@
         <Filename Value="fpgui.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="fpgui"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="75"/>
-        <CursorPos X="17" Y="87"/>
-        <UsageCount Value="100"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="4"/>
+        <UsageCount Value="107"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="fpgui_h.pas"/>
         <UnitName Value="fpgui_h"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="13" Y="1"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="50"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="fpglib_class.pas"/>
         <UnitName Value="fpglib_class"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="2" Y="3"/>
-        <UsageCount Value="41"/>
+        <CursorPos X="3" Y="3"/>
+        <UsageCount Value="44"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="..\..\..\..\usr\share\fpcsrc\2.6.2\packages\fcl-process\src\process.pp"/>
-        <UnitName Value="process"/>
-        <EditorIndex Value="4"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
-        <CursorPos X="44" Y="25"/>
-        <UsageCount Value="28"/>
-        <Loaded Value="True"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="mystyle.pas"/>
         <UnitName Value="mystyle"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="35"/>
         <CursorPos X="1" Y="36"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
-      </Unit4>
-      <Unit5>
+      </Unit3>
+      <Unit4>
         <Filename Value="jni.pas"/>
         <UnitName Value="jni"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="231"/>
         <CursorPos X="99" Y="238"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="sakfpg.pas"/>
+        <UnitName Value="sakfpg"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="648"/>
+        <CursorPos X="22" Y="695"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
       </Unit5>
     </Units>
@@ -168,4 +168,4 @@
     </Exceptions>
   </Debugging>
   <EditorMacros Count="0"/>
-</CONFIG>
+</CONFIG>
