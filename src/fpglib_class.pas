@@ -6,7 +6,7 @@ interface
 
 uses
    {$IF DEFINED(Java)}
-     jni,
+    jni,
    {$endif}
   ctypes,
   fpg_grid,
@@ -130,4 +130,4 @@ begin
  end;
 
 begin
-end.
+end.

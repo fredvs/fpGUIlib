@@ -7,7 +7,7 @@ library fpgui;
 {$DEFINE assistive}     //// uncomment if you want assistive fpGUI library
 
 uses
- cmem,                 /// uncomment if you need cmem
+   cmem,                 /// uncomment if you need cmem
  {$IF DEFINED(assistive)}
   sakfpg,
   {$endif}
@@ -691,4 +691,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.
