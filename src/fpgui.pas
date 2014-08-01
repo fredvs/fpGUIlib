@@ -31,9 +31,9 @@ type
      var
   {$endif}
 
-  {$IF DEFINED(Java)}
-    theclass : JClass;
-  {$endif}
+     {$IF DEFINED(Java)}
+        theclass : JClass;
+      {$endif}
 
  {$IF DEFINED(assistive)}
 
@@ -691,4 +691,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.
