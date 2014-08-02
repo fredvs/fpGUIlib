@@ -197,6 +197,14 @@ var
 
  implementation
 
+{$IFDEF FREEBSD}
+// These are missing for FreeBSD in FPC's RTL
+const
+    S_IRWXU =  S_IRUSR or S_IWUSR or S_IXUSR;
+    S_IRWXG =  S_IRGRP or S_IWGRP or S_IXGRP;
+    S_IRWXO =  S_IROTH or S_IWOTH or S_IXOTH;
+{$ENDIF}
+
 /////////////////////////// Capture Assistive Procedures
 
 function WhatName(Sender: TObject): string;
