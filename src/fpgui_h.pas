@@ -6,7 +6,7 @@ with reference counter too...
 
  fred van stappen / fiens@hotmail.com
 }
-{$defIne Assistive}     //// uncomment if use assistive fpguI library
+{$defIne Assistive}      //// uncomment if use assistive fpguI library
 
 interface
 
