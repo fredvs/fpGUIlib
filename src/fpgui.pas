@@ -1,7 +1,7 @@
 library fpgui;
 {$mode objfpc}
 
-{$DEFINE Java}     //// uncomment if you want a Java-compatible fpGUI library
+{.$DEFINE Java}     //// uncomment if you want a Java-compatible fpGUI library
                    ///   ( do not forget to uncomment fpglib_class too )
 
 {$DEFINE assistive}     //// uncomment if you want assistive fpGUI library
@@ -691,4 +691,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.
