@@ -691,4 +691,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.

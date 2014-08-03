@@ -46,11 +46,8 @@
       <Unit0>
         <Filename Value="fpgui.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="fpgui"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="26"/>
-        <CursorPos X="16" Y="36"/>
-        <UsageCount Value="108"/>
+        <CursorPos X="2" Y="4"/>
+        <UsageCount Value="111"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -58,16 +55,15 @@
         <UnitName Value="fpgui_h"/>
         <EditorIndex Value="6"/>
         <CursorPos X="13"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="fpglib_class.pas"/>
         <UnitName Value="fpglib_class"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="87"/>
-        <CursorPos X="2" Y="88"/>
-        <UsageCount Value="44"/>
+        <CursorPos X="2" Y="3"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -76,7 +72,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="35"/>
         <CursorPos Y="36"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -85,15 +81,17 @@
         <EditorIndex Value="4"/>
         <TopLine Value="231"/>
         <CursorPos X="99" Y="238"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="sakfpg.pas"/>
         <UnitName Value="sakfpg"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="88" Y="80"/>
-        <UsageCount Value="13"/>
+        <TopLine Value="179"/>
+        <CursorPos X="7" Y="198"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -102,7 +100,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="27"/>
         <CursorPos X="36" Y="34"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -111,7 +109,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="23"/>
         <CursorPos X="2" Y="23"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit7>
     </Units>
