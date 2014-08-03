@@ -46,8 +46,7 @@
       <Unit0>
         <Filename Value="fpgui.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="fpgui"/>
-        <CursorPos X="3" Y="4"/>
+        <CursorPos X="2" Y="4"/>
         <UsageCount Value="111"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -62,8 +61,9 @@
       <Unit2>
         <Filename Value="fpglib_class.pas"/>
         <UnitName Value="fpglib_class"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="3" Y="3"/>
+        <CursorPos X="2" Y="3"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -88,7 +88,6 @@
       <Unit5>
         <Filename Value="sakfpg.pas"/>
         <UnitName Value="sakfpg"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <CursorPos X="66" Y="17"/>
         <UsageCount Value="15"/>

@@ -1,6 +1,6 @@
 unit fpglib_class;
 
-{.$DEFINE Java}     //// uncomment if you want a Java-compatible fpGuI library
+{$DEFINE Java}     //// uncomment if you want a Java-compatible fpGuI library
 
 interface
 
