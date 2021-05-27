@@ -1,10 +1,10 @@
 library fpgui;
 {$mode objfpc}
 
-{$DEFINE Java}     //// uncomment if you want a Java-compatible fpGUI library
+{.$DEFINE Java}     //// uncomment if you want a Java-compatible fpGUI library
                    ///   ( do not forget to uncomment fpglib_class too )
 
-{$DEFINE assistive}     //// uncomment if you want assistive fpGUI library
+{.$DEFINE assistive}     //// uncomment if you want assistive fpGUI library
 
 uses
    cmem,                 /// uncomment if you need cmem
@@ -97,7 +97,9 @@ end;
 procedure fpgInitialize(); cdecl;
 begin
 setlength(afpgform,0);
+//writeln('before fpgapplication.Initialize');
 fpgapplication.Initialize;
+//writeln('after fpgapplication.Initialize');
 end;
 {$endif}
 
@@ -691,4 +693,4 @@ fpgbuttonsetenabled name 'Java_fpg_buttonsetenabled'
       {$endif}
 
 ;
-end.
+end.

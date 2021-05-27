@@ -185,7 +185,7 @@ begin
 
         referencecounter := 1;
 
-        result := fpg_Isloaded;
+         if fpgInitialize <> nil then result := fpg_Isloaded else result := false;
       except
         fpg_unloadlib();
       end;
@@ -208,4 +208,4 @@ begin
   end;
 end;
 
-end.
+end.

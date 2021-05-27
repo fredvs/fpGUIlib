@@ -142,10 +142,16 @@ begin
         ordir := ordir + 'libfpgui.so';
     {$ENDIF}
 
+  // writeln('init');
+
  if fpg_loadlib(pchar(ordir)) then
   try
+  
+ // writeln('ok fpg_loadlib');
     fpginitialize() ;
-
+    
+ //  writeln('ok fpginitialize');  
+    
   // fpgSetStyle('Demo Style') ;
         while indexform < 3 do
  begin
@@ -211,4 +217,4 @@ end;
 
 begin
   MainProc;
-end.
+end.
