@@ -116,7 +116,7 @@ options=114
  value=
  [projectoptionsfo.makegroupbox]
  firsttab=0
- index=5
+ index=2
  [projectoptionsfo.exceptionsgrid]
  propcolwidthref=637
  width0=77
@@ -164,7 +164,7 @@ makeoptions=5
  -gl -O-
  -B
  -FUunits
- -O2 -XX -CX -Xs
+ -O1 -XX -CX -Xs
 makeoptpurpose=5
  
  
@@ -385,14 +385,14 @@ modulefiles=0
 befcommandon=0
 makeoptionson=5
  4095
- 4095
+ 4035
  4063
  4095
- 32
+ 60
 compilerusedon=29
- 4047
+ 4039
  0
- 0
+ 8
  0
  0
  16
@@ -685,10 +685,10 @@ findhistory=2
  fpginitialize
 findoptions=1
 editpos=4
- 0,166
- 0,8
+ 0,154
  0,-1073741823
- 0,84
+ 0,-1073741823
+ 0,-1073741823
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -696,13 +696,13 @@ bookmarks3=0
 sourcefiles=4
  ${PROJECTDIR}/fpglibtest.pas
  ${PROJECTDIR}/fpgui_h.pas
- /home/fred/fpGUIlib/src/fpglib_class.pas
- /home/fred/fpGUIlib/src/fpgui.pas
+ ${PROJECTDIR}/fpglib_class.pas
+ ${PROJECTDIR}/fpgui.pas
 relpaths=4
  fpglibtest.pas
  fpgui_h.pas
  src/fpglib_class.pas
- ../src/fpgui.pas
+ src/fpgui.pas
 ismoduletexts=4
  0
  0
@@ -847,7 +847,7 @@ windowlayout=573
  [projecttreefo]
  splitdir=0
  useroptions=268484715
- stackedunder=targetconsolefo
+ stackedunder=mainfo
  parent=
  mdistate=3
  nx=0
@@ -872,7 +872,7 @@ windowlayout=573
  sorted=0
  col=1
  row=0
- rowheight=17
+ rowheight=16
  [stackfo]
  splitdir=0
  useroptions=268460137
@@ -1179,7 +1179,7 @@ windowlayout=573
  x=0
  y=0
  cx=1219
- cy=52
+ cy=50
  rcx=0
  rcy=0
  [debuggerfo.basedock]
@@ -1190,12 +1190,12 @@ windowlayout=573
  mdistate=0
  nx=0
  ny=0
- ncx=1219
- ncy=60
+ ncx=1204
+ ncy=56
  x=0
  y=0
  cx=1219
- cy=60
+ cy=54
  rcx=0
  rcy=0
  [debuggerfo.edit_options]
@@ -1207,6 +1207,7 @@ windowlayout=573
  [debuggerfo.file_history]
  value=/home/fred/fpGUIlib/demos/demo_fpc/fpglibtest.pas
  history=20
+  /home/fred/fpGUIlib/demos/demo_fpc/fpglibtest.pas
   /home/fred/fpGUIlib/src/fpgui.pas
   /home/fred/fpGUIlib/demos/demo_fpc/fpgui_h.pas
   /home/fred/fpGUIlib/src/fpglib_class.pas
@@ -1226,9 +1227,8 @@ windowlayout=573
   /home/fred/ideu/src/messageform.pas
   /home/fred/ideu/src/finddialogform.pas
   /home/fred/ideu/src/targetconsole.pas
-  /home/fred/Downloads/eschecs-master/source/connect.pas
  [debuggerfo.project_options]
- value=4
+ value=2
  [debuggerfo.hints]
  value=1
  [sourcefo]
@@ -1244,7 +1244,7 @@ windowlayout=573
  x=0
  y=0
  cx=1219
- cy=454
+ cy=456
  rcx=0
  rcy=0
  [sourcefo.files_tab]
@@ -1285,9 +1285,9 @@ windowlayout=573
  ncx=0
  ncy=0
  x=0
- y=55
+ y=53
  cx=1219
- cy=454
+ cy=456
  rcx=0
  rcy=0
 [targetconsole]

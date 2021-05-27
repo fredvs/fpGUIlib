@@ -154,7 +154,7 @@ options=114
  value=
  [projectoptionsfo.makegroupbox]
  firsttab=0
- index=0
+ index=2
  [projectoptionsfo.exceptionsgrid]
  propcolwidthref=699
  width0=47
@@ -454,9 +454,9 @@ makeoptionson=9
  4095
  4095
 compilerusedon=29
- 4040
+ 4032
  7
- 0
+ 8
  0
  0
  16
@@ -765,7 +765,7 @@ findhistory=17
  AddFromSynth
 findoptions=1
 editpos=2
- 0,7
+ 0,2
  0,-1073741823
 bookmarks0=0
 bookmarks1=0
@@ -942,7 +942,7 @@ windowlayout=573
  sorted=0
  col=1
  row=0
- rowheight=17
+ rowheight=16
  [stackfo]
  splitdir=0
  useroptions=268460137
@@ -1218,7 +1218,7 @@ windowlayout=573
  [componentpalettefo]
  splitdir=0
  useroptions=268460139
- stackedunder=projecttreefo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -1298,7 +1298,7 @@ windowlayout=573
   /home/fred/demo_mse/dynx_msegui/mseguiintf.pas
   /home/fred/demo_mse/dynx_msegui/xlib.pp
  [debuggerfo.project_options]
- value=4
+ value=2
  [debuggerfo.hints]
  value=0
  [sourcefo]

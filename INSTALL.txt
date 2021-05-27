@@ -6,8 +6,22 @@ and click on "Download ZIP".
 
 Unzip the folder.
 
-Add all the Fu and Fi needed by fpGUI in fpc.cfg or use fpc patch in /patch (read readme.txt before apply patch please)
+Then to compile libfpgui library with Lazarus, edit /fpGUIlib/src/extrafpc.cfg and change the path according to your system:
 
-Then compile fpGUI.pas from /src
+-fPIC
+-Fi/home/you/fpGUI-maint/src/
+-Fi/home/you/fpGUI-maint/src/corelib/
+-Fi/home/you/fpGUI-maint/src/corelib/x11/
+-Fu/home/you/fpGUI-maint/src/
+-Fu/home/you/fpGUI-maint/src/corelib/
+-Fu/home/you/fpGUI-maint/src/gui/
+-Fu/home/you/fpGUI-maint/src/corelib/x11/
+-Fu/home/you/fpGUI-maint/src/3rdparty/regex/
+-FUunits/
+-FE./
 
-Fred van Stappen.
+For Windows, change all the "corelib/x11/" with "corelib/gdi/".
+
+Then load fpGUIlib/src/fpgui.lpi project and run it.
+
+FredvS
