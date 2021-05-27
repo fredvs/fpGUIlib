@@ -116,7 +116,7 @@ options=114
  value=
  [projectoptionsfo.makegroupbox]
  firsttab=0
- index=0
+ index=5
  [projectoptionsfo.exceptionsgrid]
  propcolwidthref=637
  width0=77
@@ -390,13 +390,13 @@ makeoptionson=5
  4095
  32
 compilerusedon=29
- 4095
+ 4047
  0
  0
  0
  0
- 0
- 0
+ 16
+ 32
  0
  0
  0
@@ -427,9 +427,9 @@ debuggerusedon=6
  0
  0
 exeusedon=15
- 4095
+ 3855
  0
- 0
+ 240
  0
  0
  0
@@ -685,23 +685,23 @@ findhistory=2
  fpginitialize
 findoptions=1
 editpos=4
- 0,144
- 0,112
- 0,0
- 0,99
+ 0,166
+ 0,8
+ 0,-1073741823
+ 0,84
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
 bookmarks3=0
 sourcefiles=4
- /home/fred/fpGUIlib/demos/demo_fpc/fpglibtest.pas
- /home/fred/fpGUIlib/demos/demo_fpc/fpgui_h.pas
+ ${PROJECTDIR}/fpglibtest.pas
+ ${PROJECTDIR}/fpgui_h.pas
  /home/fred/fpGUIlib/src/fpglib_class.pas
  /home/fred/fpGUIlib/src/fpgui.pas
 relpaths=4
  fpglibtest.pas
  fpgui_h.pas
- ../src/fpglib_class.pas
+ src/fpglib_class.pas
  ../src/fpgui.pas
 ismoduletexts=4
  0
@@ -714,9 +714,9 @@ visiblemodules=0
 nomenumodules=0
 [sourcefo.files_tab]
 firsttab=0
-index=3
+index=0
 [layout]
-windowlayout=555
+windowlayout=573
  [mainfo.basedock]
  splitdir=2
  useroptions=268450944
@@ -730,8 +730,8 @@ windowlayout=555
  ny=0
  ncx=0
  ncy=0
- x=34
- y=45
+ x=106
+ y=86
  cx=1231
  cy=621
  rcx=0
@@ -755,8 +755,8 @@ windowlayout=555
  ny=0
  ncx=0
  ncy=0
- x=495
- y=172
+ x=487
+ y=238
  cx=497
  cy=314
  rcx=0
@@ -872,7 +872,7 @@ windowlayout=555
  sorted=0
  col=1
  row=0
- rowheight=16
+ rowheight=17
  [stackfo]
  splitdir=0
  useroptions=268460137
@@ -976,7 +976,25 @@ windowlayout=555
  visible=0
  [symbolfo.grid]
  propcolwidthref=207
- values0=0
+ values0=18
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
  width0=111
  sortdescend0=0
  width1=125
@@ -1161,7 +1179,7 @@ windowlayout=555
  x=0
  y=0
  cx=1219
- cy=69
+ cy=52
  rcx=0
  rcy=0
  [debuggerfo.basedock]
@@ -1173,11 +1191,11 @@ windowlayout=555
  nx=0
  ny=0
  ncx=1219
- ncy=77
+ ncy=60
  x=0
  y=0
  cx=1219
- cy=77
+ cy=60
  rcx=0
  rcy=0
  [debuggerfo.edit_options]
@@ -1187,8 +1205,9 @@ windowlayout=555
  [debuggerfo.edit_compiler]
  value=Pascal
  [debuggerfo.file_history]
- value=/home/fred/fpGUIlib/src/fpgui.pas
+ value=/home/fred/fpGUIlib/demos/demo_fpc/fpglibtest.pas
  history=20
+  /home/fred/fpGUIlib/src/fpgui.pas
   /home/fred/fpGUIlib/demos/demo_fpc/fpgui_h.pas
   /home/fred/fpGUIlib/src/fpglib_class.pas
   /home/fred/demo_mse/test__med/msebufdataset.pas
@@ -1208,9 +1227,8 @@ windowlayout=555
   /home/fred/ideu/src/finddialogform.pas
   /home/fred/ideu/src/targetconsole.pas
   /home/fred/Downloads/eschecs-master/source/connect.pas
-  /home/fred/demo_mse/dynx_msegui/mseguiintf.pas
  [debuggerfo.project_options]
- value=1
+ value=4
  [debuggerfo.hints]
  value=1
  [sourcefo]
@@ -1226,12 +1244,12 @@ windowlayout=555
  x=0
  y=0
  cx=1219
- cy=437
+ cy=454
  rcx=0
  rcy=0
  [sourcefo.files_tab]
  firsttab=0
- index=3
+ index=0
  [confideufo.fontname]
  value=stf_default
  [confideufo.usedefaulteditoroptions]
@@ -1267,9 +1285,9 @@ windowlayout=555
  ncx=0
  ncy=0
  x=0
- y=72
+ y=55
  cx=1219
- cy=437
+ cy=454
  rcx=0
  rcy=0
 [targetconsole]

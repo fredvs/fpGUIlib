@@ -9,7 +9,6 @@ isassist : boolean = false ;
 
 clred : longword = $ffFF0000 ;
 
-
 procedure FormClick0(formindex, typeobj, objindex : integer);
 begin
 if odd(x) then fpgFormBackgroundColor(0,$fff0fff0) else
@@ -116,14 +115,14 @@ if isassist = false then
 begin
    title := 'Disable Assistive';
    fpgButtonSetText(2, 2, Pchar(title));
-     fpgEnableAssistive();
-     isassist := true ;
+   //fpgEnableAssistive();
+   isassist := true ;
 end else
 begin
    title := 'Enable Assistive';
      fpgButtonSetText(2, 2, Pchar(title));
-       fpgdisableassistive();
-       isassist := false ;
+     //fpgdisableassistive();
+     isassist := false ;
 end;
 end;
 
@@ -135,7 +134,7 @@ ordir, title : string;
 begin
     ordir := IncludeTrailingBackslash(ExtractFilePath(ParamStr(0)));
     {$IFDEF Windows}
-      ordir := ordir + 'fpgui.dll';
+      ordir := ordir + 'libfpgui.dll';
     {$ENDIF}
 
    {$IFDEF linux}
@@ -197,11 +196,11 @@ begin
     fpgButtonOnClick(indexform,0,@ButtonClick20) ;
     fpgButtonOnClick(indexform,1,@ButtonClick21);
 
-     fpgButtonCreate(indexform,2,0,0) ;
-     fpgButtonSetPosition(indexform, 2, 250, 200 , 150, 40)  ;
-       title := 'Enable Assistive';
-   fpgButtonSetText(indexform, 2, Pchar(title));
-     fpgButtonOnClick(indexform,2,@enableassist);
+    // fpgButtonCreate(indexform,2,0,0) ;
+    // fpgButtonSetPosition(indexform, 2, 250, 200 , 150, 40)  ;
+    //   title := 'Enable Assistive';
+    // fpgButtonSetText(indexform, 2, Pchar(title));
+    // fpgButtonOnClick(indexform,2,@enableassist);
     end;
 
      fpgFormShow(indexform)  ;
@@ -210,7 +209,7 @@ begin
 
       fpgRun();
     finally
-  fpgFreeAssistive();
+  // fpgFreeAssistive();
     fpg_unloadlib();
   end;
 end;
