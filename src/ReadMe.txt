@@ -2,7 +2,7 @@ Hello.
 
 Before all, edit extrafpc.cfg and change:
 
->> /home/fred/fpGUI-develop
+>> /home/fred/fpGUI-maint
 
 according your main fpGUI folder (not fpGUlib folder).
 

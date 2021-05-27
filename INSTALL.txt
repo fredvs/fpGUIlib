@@ -1,7 +1,7 @@
 fpc compiler must be installed.
 
 Then go to:
-=> https://github.com/graemeg/fpGUI/tree/develop
+=> https://github.com/graemeg/fpGUI/tree/maint
 and click on "Download ZIP".
 
 Unzip the folder.
